@@ -92,6 +92,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>ALPHA_PLATFORM_WINDOWS;ALPHA_BUILD_DLL;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)CodeAlpha\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -106,6 +107,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>ALPHA_PLATFORM_WINDOWS;ALPHA_BUILD_DLL;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)CodeAlpha\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -120,6 +122,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>ALPHA_PLATFORM_WINDOWS;ALPHA_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)CodeAlpha\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -134,6 +137,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>ALPHA_PLATFORM_WINDOWS;ALPHA_BUILD_DLL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)CodeAlpha\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -143,9 +147,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Alpha\Log.cpp" />
     <ClCompile Include="src\Alpha\Application.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Alpha\Log.h" />
     <ClInclude Include="src\Alpha.h" />
     <ClInclude Include="src\Alpha\Application.h" />
     <ClInclude Include="src\Alpha\Core.h" />

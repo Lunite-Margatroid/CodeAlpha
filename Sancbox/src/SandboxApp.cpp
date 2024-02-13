@@ -10,7 +10,8 @@ public:
 
 	void Run() override
 	{
-		printf("SandboxApp Running.");
+		Alpha::Log::GetCoreLogger()->info("SandboxApp Running.");
+		ALPHA_CLIENT_ERROR("SandboxApp Running");
 		while (true);
 	};
 };
