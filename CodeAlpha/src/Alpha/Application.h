@@ -4,16 +4,16 @@
 namespace Alpha
 {
 
-class ALPHA_API Application
-{
-public:
-	Application();
-	virtual ~Application();
+	class ALPHA_API Application
+	{
+	public:
+		Application();
+		virtual ~Application();
 
-	virtual void Run();
+		virtual void Run();
 
-};
+	};
 
-Application* CreateApplaction();
+	Application* CreateApplaction();
 
 }

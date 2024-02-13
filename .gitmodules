@@ -1,0 +1,3 @@
+[submodule "psdlog"]
+	path = CodeAlpha/vender/spdlog
+	url = git@github.com:gabime/spdlog.git
