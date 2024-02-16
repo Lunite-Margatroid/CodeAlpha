@@ -38,5 +38,17 @@
     <ClInclude Include="src\Alpha\Log.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\Alpha\Event\Event.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Alpha\Event\ApplicationEvent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Alpha\Event\KeyEvent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Alpha\Event\MouseEvent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

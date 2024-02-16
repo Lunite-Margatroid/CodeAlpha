@@ -10,7 +10,8 @@ public:
 
 	void Run() override
 	{
-		Alpha::Log::GetCoreLogger()->info("SandboxApp Running.");
+		Alpha::KeyPressedEvent event(0);
+		ALPHA_CLIENT_INFO(event.ToString());
 		ALPHA_CLIENT_ERROR("SandboxApp Running");
 		while (true);
 	};
