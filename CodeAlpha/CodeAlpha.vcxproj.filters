@@ -21,6 +21,9 @@
     <ClCompile Include="src\Alpha\Log.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\Alphapch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Alpha\Application.h">
@@ -48,6 +51,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\Alpha\Event\MouseEvent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Alphapch.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

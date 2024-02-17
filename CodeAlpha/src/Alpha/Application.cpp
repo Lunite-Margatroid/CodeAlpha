@@ -1,3 +1,4 @@
+#include "Alphapch.h"
 #include "Application.h"
 
 namespace Alpha
