@@ -5,5 +5,7 @@
 #include "Alpha/Event/Event.h"
 #include "Alpha/Event/KeyEvent.h"
 
+#include "Windows/WindowsWindow.h"
+
 // Entry Point
 #include "Alpha/EntryPoint.h"

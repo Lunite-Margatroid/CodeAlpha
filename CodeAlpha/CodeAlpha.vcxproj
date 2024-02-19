@@ -71,19 +71,19 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(Solutiondir)bin\$(Platform)\$(Configuration)\$(ProjectName)</OutDir>
+    <OutDir>$(Solutiondir)bin\$(Platform)\$(Configuration)</OutDir>
     <IntDir>$(Solutiondir)bin-int\$(Platform)\$(Configuration)\$(ProjectName)</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(Solutiondir)bin\$(Platform)\$(Configuration)\$(ProjectName)</OutDir>
+    <OutDir>$(Solutiondir)bin\$(Platform)\$(Configuration)</OutDir>
     <IntDir>$(Solutiondir)bin-int\$(Platform)\$(Configuration)\$(ProjectName)</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(Solutiondir)bin\$(Platform)\$(Configuration)\$(ProjectName)</OutDir>
+    <OutDir>$(Solutiondir)bin\$(Platform)\$(Configuration)</OutDir>
     <IntDir>$(Solutiondir)bin-int\$(Platform)\$(Configuration)\$(ProjectName)</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(Solutiondir)bin\$(Platform)\$(Configuration)\$(ProjectName)</OutDir>
+    <OutDir>$(Solutiondir)bin\$(Platform)\$(Configuration)</OutDir>
     <IntDir>$(Solutiondir)bin-int\$(Platform)\$(Configuration)\$(ProjectName)</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -92,13 +92,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>ALPHA_PLATFORM_WINDOWS;ALPHA_BUILD_DLL;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)CodeAlpha\src;$(SolutionDir)CodeAlpha\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)CodeAlpha\vender\glad\include;$(SolutionDir)CodeAlpha\vender\glfw\include;$(SolutionDir)CodeAlpha\src;$(SolutionDir)CodeAlpha\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>Alphapch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependence\glfw;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -109,7 +111,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>ALPHA_PLATFORM_WINDOWS;ALPHA_BUILD_DLL;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)CodeAlpha\src;$(SolutionDir)CodeAlpha\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)CodeAlpha\vender\glad\include;$(SolutionDir)CodeAlpha\vender\glfw\include;$(SolutionDir)CodeAlpha\src;$(SolutionDir)CodeAlpha\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>Alphapch.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -118,6 +120,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependence\glfw;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -126,13 +130,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>ALPHA_PLATFORM_WINDOWS;ALPHA_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)CodeAlpha\src;$(SolutionDir)CodeAlpha\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)CodeAlpha\vender\glad\include;$(SolutionDir)CodeAlpha\vender\glfw\include;$(SolutionDir)CodeAlpha\src;$(SolutionDir)CodeAlpha\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>Alphapch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependence\glfw;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -143,7 +149,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>ALPHA_PLATFORM_WINDOWS;ALPHA_BUILD_DLL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)CodeAlpha\src;$(SolutionDir)CodeAlpha\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)CodeAlpha\vender\glad\include;$(SolutionDir)CodeAlpha\vender\glfw\include;$(SolutionDir)CodeAlpha\src;$(SolutionDir)CodeAlpha\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>Alphapch.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -152,6 +158,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependence\glfw;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -163,6 +171,8 @@
     </ClCompile>
     <ClCompile Include="src\Alpha\Log.cpp" />
     <ClCompile Include="src\Alpha\Application.cpp" />
+    <ClCompile Include="src\Alpha\Window.cpp" />
+    <ClCompile Include="src\Windows\WindowsWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Alphapch.h" />
@@ -175,6 +185,8 @@
     <ClInclude Include="src\Alpha\Application.h" />
     <ClInclude Include="src\Alpha\Core.h" />
     <ClInclude Include="src\Alpha\EntryPoint.h" />
+    <ClInclude Include="src\Alpha\Window.h" />
+    <ClInclude Include="src\Windows\WindowsWindow.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

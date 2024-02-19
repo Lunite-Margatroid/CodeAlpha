@@ -5,7 +5,7 @@
 
 namespace Alpha
 {
-	struct WindowProps
+	struct ALPHA_API WindowProps
 	{
 		std::string Title;
 		uint32_t Width;
@@ -19,7 +19,7 @@ namespace Alpha
 		{ }
 	};
 
-	class Window
+	class ALPHA_API Window
 	{
 	public:
 		using EventCallbackFn = std::function<void(Event&)>;
