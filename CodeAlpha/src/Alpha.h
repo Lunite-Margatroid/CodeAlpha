@@ -6,6 +6,8 @@
 #include "Alpha/Event/KeyEvent.h"
 
 #include "Windows/WindowsWindow.h"
+#include "Alpha/LayerStack.h"
+
 
 // Entry Point
 #include "Alpha/EntryPoint.h"

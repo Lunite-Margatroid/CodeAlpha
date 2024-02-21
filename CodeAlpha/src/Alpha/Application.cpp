@@ -18,9 +18,19 @@ namespace Alpha
 	void Application::Run()
 	{
 		printf("Alpha::Application Running.");
+		float currentTime = glfwGetTime();
+		float lastTime;
+		float deltaTime;
+
 		while (m_Running)
 		{
+			lastTime = currentTime;
+			currentTime = glfwGetTime();
+			deltaTime = currentTime - lastTime;
+
 			m_Window->OnUpdate();
+			for (Layer* layer : m_LayerStack)
+				layer->OnUpdate(deltaTime);
 		}
 	}
 	void Application::OnEvent(Event& e)
@@ -34,5 +44,15 @@ namespace Alpha
 	{
 		m_Running = false;
 		return true;
+	}
+	void Application::PushLayer(Layer* layer)
+	{
+		m_LayerStack.PushLayer(layer);
+		layer->OnAttach();
+	}
+	void Application::PushOverlayer(Layer* layer)
+	{
+		m_LayerStack.PushOverlayer(layer);
+		layer->OnAttach();
 	}
 }

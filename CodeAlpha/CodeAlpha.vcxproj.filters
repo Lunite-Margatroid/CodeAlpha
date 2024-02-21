@@ -30,6 +30,12 @@
     <ClCompile Include="src\Windows\WindowsWindow.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\Alpha\Layer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Alpha\LayerStack.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Alpha\Application.h">
@@ -66,6 +72,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\Windows\WindowsWindow.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Alpha\Layer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Alpha\LayerStack.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

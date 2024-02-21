@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CodeAlpha", "CodeAlpha\Code
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sandbox", "Sancbox\Sancbox.vcxproj", "{221C006A-8D63-48F0-865A-D71AF549D706}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Glad", "Glad\Glad.vcxproj", "{21A4E673-1ACE-4721-849F-8FEBD6E2C27D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{221C006A-8D63-48F0-865A-D71AF549D706}.Release|x64.Build.0 = Release|x64
 		{221C006A-8D63-48F0-865A-D71AF549D706}.Release|x86.ActiveCfg = Release|Win32
 		{221C006A-8D63-48F0-865A-D71AF549D706}.Release|x86.Build.0 = Release|Win32
+		{21A4E673-1ACE-4721-849F-8FEBD6E2C27D}.Debug|x64.ActiveCfg = Debug|x64
+		{21A4E673-1ACE-4721-849F-8FEBD6E2C27D}.Debug|x64.Build.0 = Debug|x64
+		{21A4E673-1ACE-4721-849F-8FEBD6E2C27D}.Debug|x86.ActiveCfg = Debug|Win32
+		{21A4E673-1ACE-4721-849F-8FEBD6E2C27D}.Debug|x86.Build.0 = Debug|Win32
+		{21A4E673-1ACE-4721-849F-8FEBD6E2C27D}.Release|x64.ActiveCfg = Release|x64
+		{21A4E673-1ACE-4721-849F-8FEBD6E2C27D}.Release|x64.Build.0 = Release|x64
+		{21A4E673-1ACE-4721-849F-8FEBD6E2C27D}.Release|x86.ActiveCfg = Release|Win32
+		{21A4E673-1ACE-4721-849F-8FEBD6E2C27D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -21,32 +21,32 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{295e0f21-d24a-4735-b7b4-a1ee24e6c5de}</ProjectGuid>
-    <RootNamespace>CodeAlpha</RootNamespace>
+    <ProjectGuid>{21a4e673-1ace-4721-849f-8febd6e2c27d}</ProjectGuid>
+    <RootNamespace>Glad</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -71,36 +71,32 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(Solutiondir)bin\$(Platform)\$(Configuration)</OutDir>
-    <IntDir>$(Solutiondir)bin-int\$(Platform)\$(Configuration)\$(ProjectName)</IntDir>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)</OutDir>
+    <IntDir>$(SolutionDir)bin-int\$(Platform)\$(Configuration)\$(ProjectName)</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(Solutiondir)bin\$(Platform)\$(Configuration)</OutDir>
-    <IntDir>$(Solutiondir)bin-int\$(Platform)\$(Configuration)\$(ProjectName)</IntDir>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)</OutDir>
+    <IntDir>$(SolutionDir)bin-int\$(Platform)\$(Configuration)\$(ProjectName)</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(Solutiondir)bin\$(Platform)\$(Configuration)</OutDir>
-    <IntDir>$(Solutiondir)bin-int\$(Platform)\$(Configuration)\$(ProjectName)</IntDir>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)</OutDir>
+    <IntDir>$(SolutionDir)bin-int\$(Platform)\$(Configuration)\$(ProjectName)</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(Solutiondir)bin\$(Platform)\$(Configuration)</OutDir>
-    <IntDir>$(Solutiondir)bin-int\$(Platform)\$(Configuration)\$(ProjectName)</IntDir>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)</OutDir>
+    <IntDir>$(SolutionDir)bin-int\$(Platform)\$(Configuration)\$(ProjectName)</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>ALPHA_PLATFORM_WINDOWS;ALPHA_BUILD_DLL;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Glad\include;$(SolutionDir)CodeAlpha\vender\glfw\include;$(SolutionDir)CodeAlpha\src;$(SolutionDir)CodeAlpha\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>Alphapch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Glad/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)Dependence\glfw;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -109,36 +105,28 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>ALPHA_PLATFORM_WINDOWS;ALPHA_BUILD_DLL;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Glad\include;$(SolutionDir)CodeAlpha\vender\glfw\include;$(SolutionDir)CodeAlpha\src;$(SolutionDir)CodeAlpha\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>Alphapch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Glad/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)Dependence\glfw;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>ALPHA_PLATFORM_WINDOWS;ALPHA_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Glad\include;$(SolutionDir)CodeAlpha\vender\glfw\include;$(SolutionDir)CodeAlpha\src;$(SolutionDir)CodeAlpha\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>Alphapch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Glad/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)Dependence\glfw;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -147,55 +135,23 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>ALPHA_PLATFORM_WINDOWS;ALPHA_BUILD_DLL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Glad\include;$(SolutionDir)CodeAlpha\vender\glfw\include;$(SolutionDir)CodeAlpha\src;$(SolutionDir)CodeAlpha\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>Alphapch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Glad/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)Dependence\glfw;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Alphapch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="src\Alpha\Layer.cpp" />
-    <ClCompile Include="src\Alpha\LayerStack.cpp" />
-    <ClCompile Include="src\Alpha\Log.cpp" />
-    <ClCompile Include="src\Alpha\Application.cpp" />
-    <ClCompile Include="src\Alpha\Window.cpp" />
-    <ClCompile Include="src\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\glad.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Alphapch.h" />
-    <ClInclude Include="src\Alpha\Event\ApplicationEvent.h" />
-    <ClInclude Include="src\Alpha\Event\Event.h" />
-    <ClInclude Include="src\Alpha\Event\KeyEvent.h" />
-    <ClInclude Include="src\Alpha\Event\MouseEvent.h" />
-    <ClInclude Include="src\Alpha\Layer.h" />
-    <ClInclude Include="src\Alpha\LayerStack.h" />
-    <ClInclude Include="src\Alpha\Log.h" />
-    <ClInclude Include="src\Alpha.h" />
-    <ClInclude Include="src\Alpha\Application.h" />
-    <ClInclude Include="src\Alpha\Core.h" />
-    <ClInclude Include="src\Alpha\EntryPoint.h" />
-    <ClInclude Include="src\Alpha\Window.h" />
-    <ClInclude Include="src\Windows\WindowsWindow.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Glad\Glad.vcxproj">
-      <Project>{21a4e673-1ace-4721-849f-8febd6e2c27d}</Project>
-    </ProjectReference>
+    <ClInclude Include="include\glad\glad.h" />
+    <ClInclude Include="include\KHR\khrplatform.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

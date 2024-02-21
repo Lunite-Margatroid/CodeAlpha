@@ -7,6 +7,7 @@
 
 #include "Alpha/Log.h"
 
+
 namespace Alpha
 {
 	static uint8_t s_GLFWWindowCount = 0;
@@ -51,6 +52,14 @@ namespace Alpha
 
 		// 生成glfw context
 		glfwMakeContextCurrent(m_Window);
+
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		if (!status)
+		{
+			ALPHA_CORE_ERROR("Glad load fault!");
+			__debugbreak();
+		}
+		glViewport(0,0,m_Data.Width, m_Data.Height);
 
 		// 设置用户指针
 		// 设置一个指针对应一个特定的窗口
@@ -161,6 +170,9 @@ namespace Alpha
 
 	void WindowsWindow::OnUpdate()
 	{
+		glClearColor(0.3f, 0.8f, 0.4f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT);
+		glfwSwapBuffers(m_Window);
 		glfwPollEvents();
 	}
 
