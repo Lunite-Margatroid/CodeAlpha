@@ -8,6 +8,11 @@
 #include "Windows/WindowsWindow.h"
 #include "Alpha/LayerStack.h"
 
+#include "Alpha/ImguiLayer.h"
+
+#include "imgui.h"
+//#include "imgui_impl_glfw.h"
+#include "imgui_impl_opengl3.h"
 
 // Entry Point
 #include "Alpha/EntryPoint.h"

@@ -32,3 +32,5 @@ namespace Alpha
 #define ALPHA_CLIENT_TRACE(...)		::Alpha::Log::GetClientLogger()->trace(__VA_ARGS__)
 #define ALPHA_CLIENT_WARN(...)		::Alpha::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define ALPHA_CLIENT_FATAL(...)		::Alpha::Log::GetClientLogger()->fatal(__VA_ARGS__)
+
+#define ALPHA_ASSERT(x)				if(!x) __debugbreak();

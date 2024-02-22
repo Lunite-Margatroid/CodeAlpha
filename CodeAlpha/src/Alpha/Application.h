@@ -8,6 +8,7 @@
 
 namespace Alpha
 {
+	
 
 	class ALPHA_API Application
 	{
@@ -16,6 +17,8 @@ namespace Alpha
 		bool m_Running = true;
 
 		LayerStack m_LayerStack;
+
+		static Application* s_Application;
 	public:
 		Application();
 		virtual ~Application();
@@ -26,6 +29,10 @@ namespace Alpha
 		
 		void PushLayer(Layer* layer);
 		void PushOverlayer(Layer* layer);
+
+		static Application& GetApplication() { return *s_Application; }
+
+		std::unique_ptr<Window>& GetWindow() { return m_Window; }
 	};
 
 	Application* CreateApplaction();

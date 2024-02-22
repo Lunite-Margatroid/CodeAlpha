@@ -15,75 +15,51 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Alpha\Application.cpp">
+    <ClCompile Include="src\imgui.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\Alpha\Log.cpp">
+    <ClCompile Include="src\imgui_impl_opengl3.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\Alphapch.cpp">
+    <ClCompile Include="src\imgui_impl_glfw.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\Alpha\Window.cpp">
+    <ClCompile Include="src\imgui_demo.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\Windows\WindowsWindow.cpp">
+    <ClCompile Include="src\imgui_draw.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\Alpha\Layer.cpp">
+    <ClCompile Include="src\imgui_tables.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\Alpha\LayerStack.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Alpha\ImguiLayer.cpp">
+    <ClCompile Include="src\imgui_widgets.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Alpha\Application.h">
+    <ClInclude Include="src\imgui.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\Alpha\Core.h">
+    <ClInclude Include="src\imconfig.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\Alpha.h">
+    <ClInclude Include="src\imgui_internal.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\Alpha\EntryPoint.h">
+    <ClInclude Include="src\imstb_textedit.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\Alpha\Log.h">
+    <ClInclude Include="src\imgui_impl_opengl3.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\Alpha\Event\Event.h">
+    <ClInclude Include="src\imgui_impl_glfw.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\Alpha\Event\ApplicationEvent.h">
+    <ClInclude Include="src\imstb_rectpack.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\Alpha\Event\KeyEvent.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Alpha\Event\MouseEvent.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Alphapch.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Alpha\Window.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Windows\WindowsWindow.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Alpha\Layer.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Alpha\LayerStack.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Alpha\ImguiLayer.h">
+    <ClInclude Include="src\imstb_truetype.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -3,9 +3,13 @@
 #include "Event/ApplicationEvent.h"
 namespace Alpha
 {
+	Application* Application::s_Application = nullptr;
 
 	Application::Application()
 	{
+		ALPHA_ASSERT(!s_Application);
+		Application::s_Application = this;
+
 		Alpha::WindowProps windowProps;
 		m_Window = std::make_unique<Alpha::WindowsWindow>(windowProps);
 		m_Window->SetEventCallback(std::bind(&Application::OnEvent, this, std::placeholders::_1));

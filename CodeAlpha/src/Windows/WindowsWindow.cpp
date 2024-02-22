@@ -38,7 +38,7 @@ namespace Alpha
 		if (s_GLFWWindowCount == 0)
 		{
 			int success = glfwInit();
-			assert(success);
+			ALPHA_ASSERT(success);
 			glfwSetErrorCallback(GLFWErrorCallback);
 		}
 
@@ -49,10 +49,14 @@ namespace Alpha
 			m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 			s_GLFWWindowCount++;
 		}
-
+		// 设置opengl版本
+		glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
+		// core模式
+		glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 		// 生成glfw context
 		glfwMakeContextCurrent(m_Window);
-
+		glfwSwapInterval(1); // Enable vsync
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		if (!status)
 		{
@@ -170,9 +174,9 @@ namespace Alpha
 
 	void WindowsWindow::OnUpdate()
 	{
+		glfwSwapBuffers(m_Window);
 		glClearColor(0.3f, 0.8f, 0.4f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
-		glfwSwapBuffers(m_Window);
 		glfwPollEvents();
 	}
 

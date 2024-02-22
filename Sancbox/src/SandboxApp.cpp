@@ -11,12 +11,14 @@ public:
 	}
 };
 
+
 class SandboxApp :public Alpha::Application
 {
 public:
 	SandboxApp()
 	{
-		m_LayerStack.PushLayer(new ExampleLayer());
+		PushLayer(new ExampleLayer());
+		PushOverlayer(new Alpha::ImguiLayer());
 	}
 	~SandboxApp()
 	{}
