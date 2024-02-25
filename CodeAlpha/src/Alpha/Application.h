@@ -3,7 +3,11 @@
 #include "Log.h"
 #include "Window.h"
 #include "Windows/WindowsWindow.h"
+
 #include "Event/ApplicationEvent.h"
+#include "Event/KeyEvent.h"
+#include "Event/MouseEvent.h"
+
 #include "LayerStack.h"
 
 namespace Alpha

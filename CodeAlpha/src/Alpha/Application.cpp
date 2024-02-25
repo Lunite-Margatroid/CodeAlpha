@@ -7,7 +7,7 @@ namespace Alpha
 
 	Application::Application()
 	{
-		ALPHA_ASSERT(!s_Application);
+		ALPHA_CORE_ASSERT(!s_Application, "App Instance Should exist single");
 		Application::s_Application = this;
 
 		Alpha::WindowProps windowProps;
@@ -32,6 +32,8 @@ namespace Alpha
 			currentTime = glfwGetTime();
 			deltaTime = currentTime - lastTime;
 
+			// window OnUpdate包含消息分发
+			// 每一个消息都会发送给Application::OnEvent
 			m_Window->OnUpdate();
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate(deltaTime);
@@ -41,6 +43,15 @@ namespace Alpha
 	{
 		EventDispatcher eventDispatcher(e);
 		eventDispatcher.Dispatch<WindowCloseEvent>(std::bind(&Application::OnWindowClose, this, std::placeholders::_1));
+
+		for (auto it = m_LayerStack.rbegin();
+			it != m_LayerStack.rend(); it++)
+		{
+			if (e.Handled)
+				break;
+			(*it)->OnEvent(e);
+		}
+
 
 		ALPHA_CORE_TRACE("{0}", e.ToString());
 	}

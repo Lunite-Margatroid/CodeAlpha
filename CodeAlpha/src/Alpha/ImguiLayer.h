@@ -19,5 +19,15 @@ namespace Alpha
 
 		void OnDetach() override;
 
+		void OnEvent(Event& e) override;
+
+		bool OnKeyPressedEvent(KeyPressedEvent& e);
+		bool OnKeyReleasedEvent(KeyReleasedEvent& e);
+		bool OnKeyTypedEvent(KeyTypedEvent& e);
+		bool OnMouseMovedEvent(MouseMovedEvent& e);
+		bool OnMouseButtonPressedEvent(MouseButtonPressedEvent& e);
+		bool OnMouseButtonReleasedEvent(MouseButtonReleasedEvent& e);
+		bool OnMouseScrolledEvent(MouseScrolledEvent& e);
+		
 	};
 }

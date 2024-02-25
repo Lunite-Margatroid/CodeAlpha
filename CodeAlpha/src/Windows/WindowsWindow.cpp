@@ -38,7 +38,7 @@ namespace Alpha
 		if (s_GLFWWindowCount == 0)
 		{
 			int success = glfwInit();
-			ALPHA_ASSERT(success);
+			ALPHA_CLIENT_ASSERT(success, "glfw Init failed");
 			glfwSetErrorCallback(GLFWErrorCallback);
 		}
 
