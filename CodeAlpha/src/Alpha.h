@@ -14,5 +14,7 @@
 //#include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 
+#include "Alpha/Input.h"
+
 // Entry Point
 #include "Alpha/EntryPoint.h"

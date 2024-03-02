@@ -53,7 +53,7 @@ namespace Alpha
 		}
 
 
-		ALPHA_CORE_TRACE("{0}", e.ToString());
+		//ALPHA_CORE_TRACE("{0}", e.ToString());
 	}
 	bool Application::OnWindowClose(WindowCloseEvent& e)
 	{

@@ -7,7 +7,7 @@ public:
 	~ExampleLayer() {}
 	void OnUpdate(float ts) override
 	{
-		ALPHA_CLIENT_TRACE("Example Update");
+		//ALPHA_CLIENT_TRACE("Example Update");
 	}
 };
 

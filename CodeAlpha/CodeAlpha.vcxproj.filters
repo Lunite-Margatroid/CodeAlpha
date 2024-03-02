@@ -39,6 +39,9 @@
     <ClCompile Include="src\Alpha\ImguiLayer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\Alpha\Input.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Alpha\Application.h">
@@ -84,6 +87,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\Alpha\ImguiLayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Alpha\Input.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

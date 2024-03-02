@@ -95,6 +95,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)imgui\src;$(SolutionDir)Glad\include;$(SolutionDir)Dependence\include;$(SolutionDir)CodeAlpha\src;$(SolutionDir)CodeAlpha\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>Alphapch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -114,6 +115,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)imgui\src;$(SolutionDir)Glad\include;$(SolutionDir)Dependence\include;$(SolutionDir)CodeAlpha\src;$(SolutionDir)CodeAlpha\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>Alphapch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,6 +135,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)imgui\src;$(SolutionDir)Glad\include;$(SolutionDir)Dependence\include;$(SolutionDir)CodeAlpha\src;$(SolutionDir)CodeAlpha\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>Alphapch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -152,6 +155,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)imgui\src;$(SolutionDir)Glad\include;$(SolutionDir)Dependence\include;$(SolutionDir)CodeAlpha\src;$(SolutionDir)CodeAlpha\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>Alphapch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -170,6 +174,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\Alpha\ImguiLayer.cpp" />
+    <ClCompile Include="src\Alpha\Input.cpp" />
     <ClCompile Include="src\Alpha\Layer.cpp" />
     <ClCompile Include="src\Alpha\LayerStack.cpp" />
     <ClCompile Include="src\Alpha\Log.cpp" />
@@ -184,6 +189,7 @@
     <ClInclude Include="src\Alpha\Event\KeyEvent.h" />
     <ClInclude Include="src\Alpha\Event\MouseEvent.h" />
     <ClInclude Include="src\Alpha\ImguiLayer.h" />
+    <ClInclude Include="src\Alpha\Input.h" />
     <ClInclude Include="src\Alpha\Layer.h" />
     <ClInclude Include="src\Alpha\LayerStack.h" />
     <ClInclude Include="src\Alpha\Log.h" />

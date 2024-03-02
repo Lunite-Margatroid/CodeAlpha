@@ -22,7 +22,6 @@ namespace Alpha
 		io.DeltaTime = ts;*/
 
 		ImGui_ImplOpenGL3_NewFrame();
-		//ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
 
 		ImGui::ShowDemoWindow(&m_ShowDemoWindow);
@@ -32,7 +31,7 @@ namespace Alpha
 
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
-		ALPHA_CLIENT_TRACE("ImguiLayer Update");
+		//ALPHA_CLIENT_TRACE("ImguiLayer Update");
 	}
 
 	void ImguiLayer::OnAttach()
@@ -52,8 +51,6 @@ namespace Alpha
 
 		// Setup Dear ImGui style
 		ImGui::StyleColorsDark();
-		// Setup Platform/Renderer backends
-		//ImGui_ImplGlfw_InitForOpenGL((GLFWwindow*)Alpha::Application::GetApplication().GetWindow()->GetNativeWindow(), true);
 		// glsl version
 		const char* glsl_version = "#version 410";
 		ImGui_ImplOpenGL3_Init(glsl_version);
@@ -62,7 +59,6 @@ namespace Alpha
 	void ImguiLayer::OnDetach()
 	{
 		ImGui_ImplOpenGL3_Shutdown();
-		//ImGui_ImplGlfw_Shutdown();
 		ImGui::DestroyContext();
 	}
 	void ImguiLayer::OnEvent(Event& e)
@@ -81,6 +77,7 @@ namespace Alpha
         ImGuiIO& io = ImGui::GetIO();
         ImGuiKey imgui_key = KeyMap(e.GetKeyCode());
         io.AddKeyEvent(imgui_key, true);
+
 		return false;
 	}
     bool ImguiLayer::OnKeyReleasedEvent(KeyReleasedEvent& e)
@@ -94,6 +91,7 @@ namespace Alpha
     {
         ImGuiIO& io = ImGui::GetIO();
         io.AddInputCharacter(e.GetKeyCode());
+        
         return false;
     }
 	bool ImguiLayer::OnMouseMovedEvent(MouseMovedEvent& e)

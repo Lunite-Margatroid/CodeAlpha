@@ -1,4 +1,5 @@
 #pragma once
+#include "Alpha/Log.h"
 #include "Alpha/Window.h"
 #include "GLFW/glfw3.h"
 namespace Alpha
